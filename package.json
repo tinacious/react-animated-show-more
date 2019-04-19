@@ -11,14 +11,14 @@
     "start": "parcel src/index.html"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.8.0"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "parcel": "^1.12.3",
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "eslint": "^5.16.0",
     "react": "^16.8.6"
   }
 }
