@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>💬 React Animated Show More 👆</title>
+  <link rel="stylesheet" type="text/css" href="http://christinaholly.com/site/templates/css/main.css">
+  <style>
+    /* demo theme styles */
+    .container {
+      max-width: 600px;
+    }
+
+    .site-header .logo {
+      width: 100%;
+    }
+
+    .logo span,
+    .logo img {
+      display: block;
+      float: left;
+    }
+
+    .logo span {
+      padding: 10px 0 0 10px;
+    }
+
+    .site-header {
+      padding: 5px 0;
+    }
+
+    @media (max-width: 767px) {
+      .site-header .logo span {
+        display: block;
+      }
+    }
+
+
+    /* styles specific to react-animated-show-more demo */
+    .demo-wrapper {
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="http://tinaciousdesign.com/images/td-logo.png" alt="Tinacious Design logo" width="50">
+        <span><b><a href="http://tinaciousdesign.com/">Tinacious Design</a></b> &ndash; plugin demos</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="site-content">
+    <div class="container">
+      <div id="app"></div>
+
+      <p>
+        <a href="https://github.com/tinacious/react-animated-show-more" class="btn">Download on Github</a>
+      </p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
