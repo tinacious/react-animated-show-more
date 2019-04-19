@@ -2,7 +2,7 @@
   "name": "react-animated-show-more",
   "version": "1.0.0",
   "description": "Fully customizable animated 'show more' plugin",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/tinacious/react-animated-show-more",
   "author": "Tina Holly",
   "license": "MIT",
