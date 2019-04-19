@@ -2,12 +2,14 @@
   "name": "react-animated-show-more",
   "version": "1.0.0",
   "description": "Fully customizable animated 'show more' plugin",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/tinacious/react-animated-show-more",
   "author": "Tina Holly",
   "license": "MIT",
   "private": false,
   "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build",
     "start": "parcel src/index.html"
   },
   "peerDependencies": {
@@ -20,13 +22,17 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/plugin-syntax-jsx": "^7.2.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "eslint": "^5.16.0",
     "parcel": "^1.12.3",
     "parcel-bundler": "^1.12.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
   }
 }

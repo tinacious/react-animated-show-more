@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { DemoText } from './components/DemoText';
 import { DemoToggle } from './components/DemoToggle';
 
-import AnimatedReadMore from '../index';
+import AnimatedReadMore from './index';
 
 const App = () => (
   <div style={{ width: 600, margin: '0 auto' }}>
