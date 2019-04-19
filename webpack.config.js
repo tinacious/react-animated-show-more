@@ -2,10 +2,12 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
-  mode: 'development',
+  mode: 'production',
+  // mode: 'development',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
+    library: 'AnimatedShowMore',
     libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
   },
   module: {
@@ -31,7 +33,13 @@ module.exports = {
     ]
   },
   externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React'
+    },
     // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
-    'react': 'commonjs react'
+    // 'react': 'commonjs react umd'
   }
 };
