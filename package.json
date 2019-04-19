@@ -2,15 +2,15 @@
   "name": "react-animated-show-more",
   "version": "1.0.0",
   "description": "Fully customizable animated 'show more' plugin",
-  "main": "build/index.js",
+  "main": "build/react-animated-show-more.min.js",
   "repository": "https://github.com/tinacious/react-animated-show-more",
   "author": "Tina Holly",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack",
-    "postinstall": "npm run build",
-    "prepublish": "npm run build",
+    "build": "rollup -c -o dist/react-animated-show-more.min.js",
+    "prepublish": "build",
+    "build:webpack": "webpack",
     "dev:webpack": "webpack-dev-server --config ./webpack.config.js --mode development",
     "dev:parcel": "parcel src/index.html",
     "start": "npm run dev:webpack"
@@ -34,11 +34,15 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^5.16.0",
     "parcel": "^1.12.3",
     "parcel-bundler": "^1.12.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-uglify": "^6.0.2",
     "webpack-dev-server": "^3.3.1"
   }
 }
