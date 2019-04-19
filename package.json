@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rollup -c -o dist/react-animated-show-more.min.js",
+    "build": "rollup -c -o lib/react-animated-show-more.min.js",
     "prepublish": "npm run build",
     "start": "parcel src/index.html"
   },
