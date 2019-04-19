@@ -2,14 +2,13 @@
   "name": "react-animated-show-more",
   "version": "1.0.0",
   "description": "Fully customizable animated 'show more' plugin",
-  "main": "lib/index.js",
+  "main": "index.js",
   "repository": "https://github.com/tinacious/react-animated-show-more",
   "author": "Tina Holly",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "parcel src/index.html",
-    "prepublish": "babel index.js --out-dir ./lib --source-maps"
+    "start": "parcel src/index.html"
   },
   "peerDependencies": {
     "react": "^16.8.6"
