@@ -12,6 +12,11 @@ This is a simple, fully-customizable component that expands an area of text to s
     - `shadowColor` (any colour format, default: `#fff`)
 
 
+## Peer dependencies
+
+- React v16.8+ (uses hooks)
+
+
 ## Usage
 
 The component wraps around your lengthy text section.
