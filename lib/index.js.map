@@ -1,0 +1,1 @@
+{"version":3,"sources":["../index.js"],"names":[],"mappings":";;;;;;;;;;;;AACA","sourcesContent":["// import React from 'react';\nexport { AnimatedReadMore as default } from './src/components/AnimatedReadMore';\n\n// export default AnimatedReadMore;\n"],"file":"index.js"}
