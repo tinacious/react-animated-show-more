@@ -1,11 +1,12 @@
 import { uglify } from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
 
 const config = {
   input: 'src/index.js',
   external: ['react'],
   output: {
-    format: 'umd',
+    format: 'commonjs',
     name: 'react-animated-show-more',
     globals: {
       react: 'React'
@@ -15,7 +16,8 @@ const config = {
     babel({
       exclude: "node_modules/**"
     }),
-    uglify()
+    uglify(),
+    commonjs(),
   ]
 };
 

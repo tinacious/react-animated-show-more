@@ -40,10 +40,18 @@ module.exports = {
   },
   externals: {
     react: {
+      root: 'React',
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react',
-      root: 'React'
+      umd: 'react',
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      umd: 'react-dom',
     },
     // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
     // 'react': 'commonjs react umd'
