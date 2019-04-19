@@ -10,6 +10,12 @@ module.exports = {
     library: 'AnimatedShowMore',
     libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
   },
+  devServer: {
+    contentBase: './build'
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   module: {
     rules: [
       {
