@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { ShadowOverlay } from './ShadowOverlay';
-import { DefaultToggle } from './DefaultToggle';
-import { MainContent } from './MainContent';
+import { ShadowOverlay } from './ShadowOverlay/index';
+import { DefaultToggle } from './DefaultToggle/index';
+import { MainContent } from './MainContent/index';
 // import PropTypes from 'prop-types';
 
 
