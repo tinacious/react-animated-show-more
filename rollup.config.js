@@ -6,7 +6,7 @@ const config = {
   external: ['react'],
   output: {
     format: 'umd',
-    name: 'countdown',
+    name: 'react-animated-show-more',
     globals: {
       react: 'React'
     }
