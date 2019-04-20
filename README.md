@@ -4,7 +4,11 @@
 
 This is a simple, fully-customizable component that expands an area of text to show the rest of it.
 
+Try out the [demo](https://tinacious.github.io/react-animated-show-more) for yourself.
+
 ![](react-animated-show-more-demo.gif)
+
+
 
 ## Features
 
