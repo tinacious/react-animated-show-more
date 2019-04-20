@@ -9,13 +9,14 @@
   "private": false,
   "scripts": {
     "build": "webpack",
+    "bundle-demo": "parcel build src/index.html --out-dir ./docs --public-url ./",
     "prepublish": "npm run build",
     "lint": "eslint src",
     "test": "jest src",
-    "ci": "npm run build && npm run lint && npm test",
+    "ci": "npm run build && npm run bundle demo && npm run lint && npm test",
     "test:watch": "jest src --watch",
     "open-coverage": "open coverage/lcov-report/index.html",
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html --out-dir tmp"
   },
   "jest": {
     "collectCoverage": true,
