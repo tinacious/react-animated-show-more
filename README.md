@@ -46,3 +46,15 @@ import AnimatedShowMore from 'react-animated-show-more';
 
 </AnimatedShowMore>
 ```
+
+
+## Contributing
+
+### How can I contribute?
+
+- Report bugs in the issue queue
+- Solve bugs in the issue queue
+- Add features (check the issue queue for ideas)
+- Write documentation
+
+Feel free to make pull requests or issues to make this project better. 👯
