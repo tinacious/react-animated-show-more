@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "webpack": "webpack",
-    "prepublish": "webpack",
+    "build": "webpack",
+    "prepublish": "npm run build",
     "start": "parcel src/index.html"
   },
   "dependencies": {},
