@@ -1,6 +1,6 @@
 # React Animated Show More
 
-[![Codeship Status for tinacious/react-animated-show-more](https://app.codeship.com/projects/857054d0-454f-0137-b8a3-5ed1374cc032/status?branch=master)](https://app.codeship.com/projects/337134)
+[![Build Status](https://travis-ci.org/tinacious/react-animated-show-more.svg?branch=master)](https://travis-ci.org/tinacious/react-animated-show-more) [![codecov](https://codecov.io/gh/tinacious/react-animated-show-more/branch/master/graph/badge.svg)](https://codecov.io/gh/tinacious/react-animated-show-more)
 
 This is a simple, fully-customizable component that expands an area of text to show the rest of it.
 
