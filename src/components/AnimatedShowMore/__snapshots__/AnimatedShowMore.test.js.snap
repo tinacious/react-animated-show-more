@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedShowMore Snapshots renders the right elements 1`] = `
+<div
+  style={
+    Object {
+      "width": 400,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "overflow": "hidden",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="AnimatedShowMore__MainContent"
+      style={
+        Object {
+          "maxHeight": "200px",
+          "overflow": "hidden",
+          "transition": "max-height 300ms linear",
+        }
+      }
+    >
+      I am inside text
+    </div>
+    <div
+      aria-hidden="true"
+      style={
+        Object {
+          "opacity": 0,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+    >
+      I am inside text
+    </div>
+  </div>
+</div>
+`;

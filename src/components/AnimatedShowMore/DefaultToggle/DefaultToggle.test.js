@@ -1,13 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { DefaultToggle } from './index';
-import { configureEnzyme } from '../../../../test-helpers';
 
 describe('DefaultToggle', () => {
-  beforeEach(() => {
-    configureEnzyme();
-  });
-
   it('has a CSS class', () => {
     const wrapper = shallow(<DefaultToggle />);
 

@@ -16,6 +16,11 @@
     "test:watch": "jest src --watch",
     "start": "parcel src/index.html"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/test-helpers/setup/enzyme.js"
+    ]
+  },
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.8.6"
