@@ -1,9 +1,8 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { ShadowOverlay } from './ShadowOverlay/index';
 import { DefaultToggle } from './DefaultToggle/index';
 import { MainContent } from './MainContent/index';
 // import PropTypes from 'prop-types';
-
 
 const useClientRect = () => {
   const [rect, setRect] = useState(null);
@@ -14,8 +13,7 @@ const useClientRect = () => {
   }, []);
 
   return [rect, ref];
-}
-
+};
 
 export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, children }) => {
   const Toggle = toggle || DefaultToggle;
@@ -30,7 +28,6 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
   const contentsHeight = rect ? rect.height : 0;
   const [currentHeight, setCurrentHeight] = useState(height);
   const [isOpen, setIsOpen] = useState(false);
-
 
   /**
    * Toggle between the maximum height (height of the content)
@@ -67,7 +64,7 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
         {/* Invisible conent container */}
         <div
           ref={contentContainerRef}
-          style={{  opacity: 0, position: 'absolute', top: 0 }}
+          style={{ opacity: 0, position: 'absolute', top: 0 }}
           aria-hidden="true">
           {children}
         </div>

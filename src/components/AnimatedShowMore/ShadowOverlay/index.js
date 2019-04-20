@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 /**
  *
  * @param {String} shadowColour
@@ -16,7 +15,6 @@ const getShadowStyles = (shadowColour = '#fff', height = 0, maxAllowedHeight = 0
   width: '100%',
   height: maxAllowedHeight === height ? 0 : '60px'
 });
-
 
 export const ShadowOverlay = ({ color, height, maxHeight }) => (
   <div
