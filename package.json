@@ -14,9 +14,11 @@
     "test": "jest src",
     "ci": "npm run lint && npm test",
     "test:watch": "jest src --watch",
+    "open-coverage": "open coverage/lcov-report/index.html",
     "start": "parcel src/index.html"
   },
   "jest": {
+    "collectCoverage": true,
     "setupFilesAfterEnv": [
       "<rootDir>/test-helpers/setup/enzyme.js"
     ]

@@ -50,15 +50,24 @@ describe('AnimatedShowMore', () => {
           </AnimatedShowMore>
         </SmallContainer>
       );
-      const styles = wrapper.find('.AnimatedShowMore__MainContent').prop('style');
+      let styles = wrapper.find('.AnimatedShowMore__MainContent').prop('style');
 
+      // Before opening
       expect(styles.overflow).toEqual('hidden');
       expect(styles.maxHeight).toEqual('100px');
 
+
       wrapper.find('.AnimatedShowMore__ToggleButton').simulate('click');
 
-      const updatedStyles = wrapper.find('.AnimatedShowMore__MainContent').prop('style');
-      expect(updatedStyles.maxHeight).toEqual('300px');
+      // After opening
+      styles = wrapper.find('.AnimatedShowMore__MainContent').prop('style');
+      expect(styles.maxHeight).toEqual('300px');
+
+      // Closing again
+      wrapper.find('.AnimatedShowMore__ToggleButton').simulate('click');
+
+      styles = wrapper.find('.AnimatedShowMore__MainContent').prop('style');
+      expect(styles.maxHeight).toEqual('100px');
     });
 
     it('displays the overlay shadow', () => {
@@ -82,10 +91,19 @@ describe('AnimatedShowMore', () => {
         </SmallContainer>
       );
       expect(wrapper.text()).toContain('Show more');
+      expect(wrapper.find('ShadowOverlay').length).toBe(1);
 
+      // Opening
       wrapper.find('.AnimatedShowMore__ToggleButton').simulate('click');
 
       expect(wrapper.text()).toContain('Show less');
+      expect(wrapper.find('ShadowOverlay').length).toBe(0);
+
+      // Closing again
+      wrapper.find('.AnimatedShowMore__ToggleButton').simulate('click');
+
+      expect(wrapper.text()).toContain('Show more');
+      expect(wrapper.find('ShadowOverlay').length).toBe(1);
     });
 
 
