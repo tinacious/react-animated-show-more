@@ -8,7 +8,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rollup -c -o lib/react-animated-show-more.min.js",
     "webpack": "webpack",
     "prepublish": "webpack",
     "start": "parcel src/index.html"
@@ -36,10 +35,6 @@
     "parcel-bundler": "^1.12.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "rollup": "^1.10.1",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-uglify": "^6.0.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
