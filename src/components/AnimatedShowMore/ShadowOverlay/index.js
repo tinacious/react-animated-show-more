@@ -19,5 +19,8 @@ const getShadowStyles = (shadowColour = '#fff', height = 0, maxAllowedHeight = 0
 
 
 export const ShadowOverlay = ({ color, height, maxHeight }) => (
-  <div style={getShadowStyles(color, height, maxHeight)} />
+  <div
+    className="AnimatedShowMore__ShadowOverlay"
+    style={getShadowStyles(color, height, maxHeight)}
+  />
 );

@@ -76,6 +76,7 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
       {/* The Toggle */}
       {shouldShowToggle && (
         <button
+          className="AnimatedShowMore__ToggleButton"
           style={{
             display: 'block',
             border: 'none',
