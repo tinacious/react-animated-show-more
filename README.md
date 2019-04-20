@@ -30,6 +30,11 @@ Try out the [demo](https://tinacious.github.io/react-animated-show-more) for you
 The component wraps around your lengthy text section.
 
 ```jsx
+import React from 'react';
+import AnimatedShowMore from 'react-animated-show-more';
+
+// ...
+
 <AnimatedShowMore
   height={100}
   toggle={({ isOpen }) => isOpen ? 'Close!' : 'Open!' }
