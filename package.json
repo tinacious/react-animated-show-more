@@ -14,6 +14,7 @@
     "lint": "eslint src",
     "test": "jest src",
     "ci": "npm run build && npm run bundle-demo && npm run lint && npm test",
+    "coverage-ci": "codecov",
     "test:watch": "jest src --watch",
     "open-coverage": "open coverage/lcov-report/index.html",
     "start": "parcel src/index.html --out-dir tmp"
@@ -42,6 +43,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^3.3.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^5.16.0",
