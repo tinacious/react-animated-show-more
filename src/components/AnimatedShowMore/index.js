@@ -37,11 +37,11 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
    */
   const handleToggleHeight = () => {
     if (currentHeight === height) {
-      setIsOpen(true);
       setCurrentHeight(contentsHeight);
+      setIsOpen(true);
     } else {
-      setIsOpen(false);
       setCurrentHeight(height);
+      setIsOpen(false);
     }
   };
   const shouldShowShadow = (contentsHeight !== height) && (height < contentsHeight);
