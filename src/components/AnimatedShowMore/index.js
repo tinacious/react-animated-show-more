@@ -1,56 +1,51 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { ShadowOverlay } from './ShadowOverlay/index';
 import { DefaultToggle } from './DefaultToggle/index';
 import { MainContent } from './MainContent/index';
 // import PropTypes from 'prop-types';
 
 
+const useClientRect = () => {
+  const [rect, setRect] = useState(null);
+  const ref = useCallback(node => {
+    if (node !== null) {
+      setRect(node.getBoundingClientRect());
+    }
+  }, []);
+
+  return [rect, ref];
+}
+
+
 export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, children }) => {
   const Toggle = toggle || DefaultToggle;
 
-  // Refs
-  const contentContainerRef = useRef(null);
-
   /**
-   * Gets the max height, which should be the contentContainerRef height
+   * We manage 3 heights:
+   *  - height: desired collapsed height
+   *  - contentsHeight: height of the actual content
+   *  - currentHeight: the active state between those 2 ( contentsHeight | height )
    */
-  const getMaxHeight = () => {
-    if (!contentContainerRef || !contentContainerRef.current) return 0;
+  const [rect, contentContainerRef] = useClientRect();
+  const contentsHeight = rect ? rect.height : 0;
+  const [currentHeight, setCurrentHeight] = useState(height);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const currentHeight = contentContainerRef.current.offsetHeight;
-    return currentHeight;
-  };
-
-  // Heights
-  // We manage 2 heights: user defined and the current
-  const [heightValues, setHeightValues] = useState({
-    userDefined: height,
-    internal: height,
-    isOpen: false,
-  });
-  const { userDefined, internal, isOpen } = heightValues;
 
   /**
    * Toggle between the maximum height (height of the content)
    */
   const handleToggleHeight = () => {
-    if (internal === userDefined) {
-      setHeightValues({
-        ...heightValues,
-        isOpen: true,
-        internal: getMaxHeight()
-      });
+    if (currentHeight === height) {
+      setIsOpen(true);
+      setCurrentHeight(contentsHeight);
     } else {
-      setHeightValues({
-        ...heightValues,
-        isOpen: false,
-        internal: heightValues.userDefined
-      });
+      setIsOpen(false);
+      setCurrentHeight(height);
     }
   };
-  const shouldShowShadow = getMaxHeight() !== userDefined;
-  const shouldShowToggle = isOpen ||
-    (internal !== getMaxHeight() && userDefined !== getMaxHeight());
+  const shouldShowShadow = (contentsHeight !== height) && (height < contentsHeight);
+  const shouldShowToggle = isOpen || shouldShowShadow;
 
   return (
     <>
@@ -59,20 +54,20 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
         { shouldShowShadow && (
           <ShadowOverlay
             color={shadowColor}
-            height={internal}
-            maxHeight={getMaxHeight()}
+            height={currentHeight}
+            maxHeight={contentsHeight}
           />
         )}
 
         {/* Main content area */}
-        <MainContent height={internal} animationSpeed={speed}>
+        <MainContent height={currentHeight} animationSpeed={speed}>
           {children}
         </MainContent>
 
         {/* Invisible conent container */}
         <div
           ref={contentContainerRef}
-          style={{ zIndex: -1, opacity: 0, position: 'absolute', top: 0 }}
+          style={{  opacity: 0, position: 'absolute', top: 0 }}
           aria-hidden="true">
           {children}
         </div>

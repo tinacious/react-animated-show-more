@@ -24,6 +24,13 @@ const App = () => (
       </AnimatedShowMore>
     </div>
 
+    <h2> With small content</h2>
+    <div className="demo-wrapper">
+      <AnimatedShowMore>
+        Not much to say... You shouldn't see a toggle
+      </AnimatedShowMore>
+    </div>
+
     <h2>🏁 With speed! </h2>
     <div className="demo-wrapper">
       <AnimatedShowMore speed={2000}>
@@ -49,7 +56,7 @@ const App = () => (
       }}>
       <AnimatedShowMore
         shadowColor="#f39"
-        toggle={({ isOpen}) => (
+        toggle={({ isOpen }) => (
           isOpen ?
             <strong><small>less ipsum</small></strong> :
             <strong><small>mo' ipsum</small></strong>
