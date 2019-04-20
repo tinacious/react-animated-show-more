@@ -4,6 +4,8 @@
 
 This is a simple, fully-customizable component that expands an area of text to show the rest of it.
 
+![](react-animated-show-more-demo.gif)
+
 ## Features
 
 - Supports custom toggle component, otherwise shows "Show more" or "Show less"
