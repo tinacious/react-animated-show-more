@@ -5,7 +5,6 @@ import { DemoToggle } from './components/DemoToggle';
 
 import AnimatedShowMore from './index.js';
 
-
 const App = () => (
   <div style={{ width: 600, margin: '0 auto' }}>
     <h1>React Animated Read More</h1>
@@ -57,9 +56,9 @@ const App = () => (
       <AnimatedShowMore
         shadowColor="#f39"
         toggle={({ isOpen }) => (
-          isOpen ?
-            <strong><small>less ipsum</small></strong> :
-            <strong><small>mo' ipsum</small></strong>
+          isOpen
+            ? <strong><small>less ipsum</small></strong>
+            : <strong><small>mo' ipsum</small></strong>
         )}>
         <DemoText />
       </AnimatedShowMore>

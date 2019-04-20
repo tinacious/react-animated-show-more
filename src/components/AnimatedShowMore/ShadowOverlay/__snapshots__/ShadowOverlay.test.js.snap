@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShadowOverlay Snapshots renders a custom shadow 1`] = `
+<div
+  className="AnimatedShowMore__ShadowOverlay"
+  style={
+    Object {
+      "backgroundImage": "linear-gradient(to bottom, transparent, #f39)",
+      "bottom": 0,
+      "height": 60,
+      "left": 0,
+      "position": "absolute",
+      "width": "100%",
+    }
+  }
+/>
+`;
+
+exports[`ShadowOverlay Snapshots renders the default shadow 1`] = `
+<div
+  className="AnimatedShowMore__ShadowOverlay"
+  style={
+    Object {
+      "backgroundImage": "linear-gradient(to bottom, transparent, #fff)",
+      "bottom": 0,
+      "height": 60,
+      "left": 0,
+      "position": "absolute",
+      "width": "100%",
+    }
+  }
+/>
+`;
