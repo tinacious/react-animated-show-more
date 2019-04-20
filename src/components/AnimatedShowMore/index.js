@@ -41,20 +41,14 @@ export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, chi
       setIsOpen(false);
     }
   };
-  const shouldShowShadow = (contentsHeight !== height) && (height < contentsHeight);
+  const shouldShowShadow = (contentsHeight !== height) && (height < contentsHeight) && !isOpen;
   const shouldShowToggle = isOpen || shouldShowShadow;
 
   return (
     <>
       <div style={{ position: 'relative', overflow: 'hidden' }}>
         {/* ShadowOverlay */}
-        { shouldShowShadow && (
-          <ShadowOverlay
-            color={shadowColor}
-            height={currentHeight}
-            maxHeight={contentsHeight}
-          />
-        )}
+        { shouldShowShadow && <ShadowOverlay color={shadowColor} /> }
 
         {/* Main content area */}
         <MainContent height={currentHeight} animationSpeed={speed}>
