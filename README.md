@@ -57,4 +57,4 @@ import AnimatedShowMore from 'react-animated-show-more';
 - Add features (check the issue queue for ideas)
 - Write documentation
 
-Feel free to make pull requests or issues to make this project better. 👯
+Feel free to make pull requests or issues to make this project better! 👯
