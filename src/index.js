@@ -1,1 +1,1 @@
-export { AnimatedReadMore as default } from './components/AnimatedReadMore/index';
+export { AnimatedShowMore as default } from './components/AnimatedShowMore/index';

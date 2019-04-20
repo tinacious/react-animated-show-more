@@ -5,7 +5,7 @@ import { MainContent } from './MainContent/index';
 // import PropTypes from 'prop-types';
 
 
-export const AnimatedReadMore = ({ toggle, height = 200, shadowColor, speed, children }) => {
+export const AnimatedShowMore = ({ toggle, height = 200, shadowColor, speed, children }) => {
   const Toggle = toggle || DefaultToggle;
 
   // Refs
@@ -98,3 +98,5 @@ export const AnimatedReadMore = ({ toggle, height = 200, shadowColor, speed, chi
     </>
   );
 };
+
+AnimatedShowMore.displayName = 'AnimatedShowMore';
