@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContent Snapshots renders 1`] = `
+<div
+  className="AnimatedShowMore__MainContent"
+  style={
+    Object {
+      "maxHeight": "200px",
+      "overflow": "hidden",
+      "transition": "max-height 500ms linear",
+    }
+  }
+>
+  Hello world
+</div>
+`;
