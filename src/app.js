@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { DemoText } from './components/DemoText';
 import { DemoToggle } from './components/DemoToggle';
 
-import AnimatedReadMore from '../index';
+import AnimatedShowMore from './index.js';
+
 
 const App = () => (
   <div style={{ width: 600, margin: '0 auto' }}>
@@ -11,30 +12,30 @@ const App = () => (
 
     <h2>⚙️ Default settings</h2>
     <div className="demo-wrapper">
-      <AnimatedReadMore>
+      <AnimatedShowMore>
         <DemoText />
-      </AnimatedReadMore>
+      </AnimatedShowMore>
     </div>
 
     <h2>▪ With custom height</h2>
     <div className="demo-wrapper">
-      <AnimatedReadMore height={110}>
+      <AnimatedShowMore height={110}>
         <DemoText />
-      </AnimatedReadMore>
+      </AnimatedShowMore>
     </div>
 
     <h2>🏁 With speed! </h2>
     <div className="demo-wrapper">
-      <AnimatedReadMore speed={2000}>
+      <AnimatedShowMore speed={2000}>
         <DemoText />
-      </AnimatedReadMore>
+      </AnimatedShowMore>
     </div>
 
     <h2>🔘 With custom toggle component</h2>
     <div className="demo-wrapper">
-      <AnimatedReadMore toggle={DemoToggle}>
+      <AnimatedShowMore toggle={DemoToggle}>
         <DemoText />
-      </AnimatedReadMore>
+      </AnimatedShowMore>
     </div>
 
     <h2>👩🏻‍🎨 With custom shadow colour</h2>
@@ -46,7 +47,7 @@ const App = () => (
         padding: '0 30px 30px',
         borderRadius: 20
       }}>
-      <AnimatedReadMore
+      <AnimatedShowMore
         shadowColor="#f39"
         toggle={({ isOpen}) => (
           isOpen ?
@@ -54,7 +55,7 @@ const App = () => (
             <strong><small>mo' ipsum</small></strong>
         )}>
         <DemoText />
-      </AnimatedReadMore>
+      </AnimatedShowMore>
     </div>
   </div>
 );

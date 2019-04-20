@@ -22,7 +22,7 @@ This is a simple, fully-customizable component that expands an area of text to s
 The component wraps around your lengthy text section.
 
 ```jsx
-<AnimatedReadMore
+<AnimatedShowMore
   height={100}
   toggle={({ isOpen }) => isOpen ? 'Close!' : 'Open!' }
   speed={2000}
@@ -31,5 +31,5 @@ The component wraps around your lengthy text section.
   {/* Lots of stuff goes here */}
   <DemoText />
 
-</AnimatedReadMore>
+</AnimatedShowMore>
 ```
