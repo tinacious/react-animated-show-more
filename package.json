@@ -1,6 +1,6 @@
 {
   "name": "react-animated-show-more",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fully customizable animated 'show more' plugin",
   "main": "build/index.js",
   "repository": "https://github.com/tinacious/react-animated-show-more",
